@@ -1,0 +1,853 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  /* primary colors */
+  --DarkBlueIntro: hsl(217, 28%, 15%);
+  --DarkBlueMain: hsl(218, 28%, 13%);
+  --DarkBlueFooter: hsl(216, 53%, 9%);
+  --DarkBlueTestimoials: hsl(219, 30%, 18%);
+
+  /* accent colors */
+  --Cyan: hsl(176, 68%, 64%);
+  --Blue: hsl(198, 60%, 50%);
+  --LightRed: hsl(0, 100%, 63%);
+
+  /* neutral */
+  --White: hsl(0, 0%, 100%);
+}
+
+/** typography **/
+
+body {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    max-width: 50%;
+    font-family: "Raleway", sans-serif;
+  }
+
+  h2 {
+    color: var(--White);
+    font-size: 1.3rem;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 0;
+  }
+
+  p {
+    line-height: 1.5;
+    font-family: "Open Sans", sans-serif;
+    color: var(--White);
+  }
+
+  main section .head p {
+    max-width: 50%;
+    font-size: 1rem;
+  }
+
+  main section .features .col p {
+    max-width: 75%;
+    font-size: 1rem;
+  }
+
+  main section .see-how .see-how-info h2 {
+    font-size: 2rem;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  main section .see-how .see-how-info p {
+    white-space: pre-line;
+    font-size: 1rem;
+    text-align: start;
+  }
+
+  main section .testimonials .card-body p {
+    font-size: 0.95rem;
+  }
+
+  main section .testimonials .user-name {
+    text-align: start;
+    font-weight: bold;
+    margin-bottom: 0;
+    letter-spacing: 0.05em;
+    margin-top: 0;
+  }
+
+  main section .testimonials .position {
+    margin-top: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  footer form h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8em;
+  }
+
+  footer form p {
+    font-size: 1rem;
+    max-width: 85%;
+    margin: 1em auto;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+    font-family: "Raleway", sans-serif;
+  }
+
+  h2 {
+    color: var(--White);
+    font-size: 1.3rem;
+    font-family: "Raleway", sans-serif;
+  }
+
+  p {
+    line-height: 1.5;
+    font-family: "Open Sans", sans-serif;
+    color: var(--White);
+  }
+
+  main section .container p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+  }
+
+  main section .see-how h2 {
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
+
+  main section .see-how p {
+    white-space: pre-line;
+    text-align: start;
+  }
+
+  main section .testimonials .card-body p {
+    font-size: 0.85rem;
+  }
+
+  main section .testimonials .user-name {
+    text-align: start;
+    font-weight: bold;
+    margin-bottom: 0;
+    letter-spacing: 0.05em;
+    margin-top: 0;
+  }
+
+  main section .testimonials .position {
+    margin-top: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  footer .footer-div .address {
+    font-size: 1rem;
+  }
+}
+
+/** layout **/
+
+html {
+  background-color: var(--DarkBlueFooter);
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    background-color: var(--DarkBlueIntro);
+  }
+
+  header .navbar {
+    padding: 1.2em;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    background-color: var(--DarkBlueIntro);
+  }
+
+  header .navbar .brand-logo {
+    display: block;
+  }
+
+  header .navbar .brand-logo img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  header .navbar ul {
+    list-style-type: none;
+    width: 100%;
+    text-align: end;
+    padding: 0;
+  }
+
+  header .navbar ul li {
+    display: inline-block;
+    padding: 0 1em;
+    margin: auto;
+  }
+
+  header .navbar ul li a {
+    text-decoration: none;
+    color: var(--White);
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  header .navbar ul li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    margin: auto;
+  }
+
+  main section .container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2em 1em;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: var(--DarkBlueIntro);
+    background-image: url("./images/bg-curvy-mobile.svg");
+    background-size: 110% 40%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin-bottom: 0;
+  }
+
+  main section .container img {
+    width: 45%;
+    max-width: 45%;
+    height: auto;
+    margin-bottom: 1.2em;
+  }
+
+  main section .container button,
+  footer form button {
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 999px;
+    height: auto;
+    border: 0;
+    background-color: var(--Blue);
+    font-size: 1rem;
+    color: var(--White);
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  main section .container button {
+    width: 25%;
+    max-width: 25%;
+  }
+
+  main section .container button:hover,
+  footer form button:hover {
+    background-color: var(--Cyan);
+  }
+
+  main section .features {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+    padding: 5em 10em;
+    margin-top: 0;
+    text-align: center;
+    color: white;
+    background-color: var(--DarkBlueMain);
+    background-image: none;
+  }
+
+  main section .features .col {
+    padding: 2.5em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+  }
+
+  main section .features .col img {
+    width: 15%;
+    max-width: 15%;
+    height: auto;
+  }
+
+  main section .features .col .security-icon {
+    width: 11.5%;
+    max-width: 11.5%;
+    height: auto;
+  }
+
+  main section .see-how {
+    background-color: var(--DarkBlueMain);
+    background-image: none;
+    text-align: start;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 1em;
+  }
+
+  main section .see-how .see-how-info {
+    padding: 1em;
+    padding-right: 2em;
+  }
+
+  main section .see-how img {
+    max-width: 90%;
+    width: 90%;
+    margin: auto;
+  }
+
+  main section .see-how a {
+    text-decoration: none;
+    text-align: start;
+    padding: 0.3em 0;
+    color: var(--Cyan);
+    display: flex;
+    box-sizing: initial;
+    align-items: center;
+    justify-content: flex-start;
+    width: 10.5em;
+    font-size: 0.95rem;
+    font-family: "Open Sans", sans-serif;
+    border-bottom: 1px solid var(--Cyan);
+  }
+
+  main section .see-how a img {
+    width: 8%;
+    margin-left: 0.3em;
+    margin-top: 0.2em;
+    margin-bottom: auto;
+    vertical-align: middle;
+  }
+
+  main section .testimonials {
+    background: url("./images/bg-quotes.png") no-repeat;
+    background-size: 3%;
+    background-position-y: 20%;
+    background-position-x: 5%;
+    background-color: var(--DarkBlueMain);
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    padding: 10em 5em;
+    padding-bottom: 20em;
+  }
+
+  main section .testimonials .card {
+    background-color: var(--DarkBlueTestimoials);
+    background-image: none;
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    box-shadow: 0 5px 5px 2px rgba(54, 54, 54, 0.1);
+    margin: 0.5em 0;
+    width: 32%;
+  }
+
+  main section .testimonials .card .card-body {
+    text-align: start;
+  }
+
+  main section .testimonials .card .card-footer {
+    display: flex;
+  }
+
+  main section .testimonials .card .card-footer .user-info {
+    padding: 0 1em;
+  }
+
+  main section .testimonials .card .card-footer > img {
+    align-self: center;
+    max-width: 10%;
+    border-radius: 999px;
+  }
+
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--DarkBlueFooter);
+    padding: 0 3em;
+  }
+
+  footer form {
+    position: absolute;
+    bottom: 70%;
+    background-color: var(--DarkBlueMain);
+    padding: 2em 3em;
+    z-index: 1;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 5px rgba(1, 1, 1, 0.2);
+    width: 75%;
+  }
+
+  footer form span {
+    font-family: "Open Sans", sans-serif;
+    color: var(--LightRed);
+    position: absolute;
+    left: 13%;
+    bottom: 5%;
+    display: none;
+  }
+
+  footer form input {
+    border: 0;
+    border-radius: 999px;
+    padding: 1.2em;
+    font-family: "Open Sans", sans-serif;
+    margin: 1.2em 0.8em;
+    width: 65%;
+  }
+
+  footer .footer-div {
+    padding: 0 1em;
+    padding-top: 1em;
+    background-color: var(--DarkBlueFooter);
+    color: var(--White);
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+  }
+
+  footer ul {
+    list-style-type: none;
+    padding: 0 1em;
+  }
+
+  footer ul li {
+    padding: 0em 0;
+    text-align: start;
+    margin: 0;
+  }
+
+  footer ul li a {
+    text-decoration: none;
+    color: var(--White);
+    transition: all 0.3s;
+  }
+
+  footer ul li a:hover {
+    font-weight: bold;
+  }
+
+  footer .social li {
+    display: inline;
+    padding: 0 0.3em;
+  }
+
+  footer .social i {
+    color: white;
+    font-size: 1rem;
+    border-radius: 999px;
+    border: 1px solid white;
+    padding: 0.5em;
+  }
+
+  footer .social li a:hover i {
+    color: var(--Cyan);
+    border: 1px solid var(--Cyan);
+  }
+
+  footer .social .fb {
+    padding: 0.5em 0.7em;
+  }
+
+  footer .logo {
+    width: 12%;
+    align-self: center;
+    margin-top: 13em;
+    margin-right: auto;
+    padding-left: 2em;
+  }
+
+  footer .footer-div .contact {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 60%;
+    column-gap: 2em;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  footer .footer-div .contact li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  footer .footer-div .contact li:nth-child(1) {
+    grid-row: 1/3;
+  }
+
+  footer .footer-div .contact li img {
+    display: inline-block;
+    align-self: center;
+    margin-right: 1.4em;
+    margin-bottom: auto;
+  }
+
+  footer .footer-div .contact li p {
+    margin-top: 0;
+    max-width: 90%;
+    margin-bottom: auto;
+  }
+
+  footer .footer-div .link {
+    margin-bottom: 1.2em;
+    text-align: start;
+    width: 13%;
+  }
+
+  footer .footer-div .link li {
+    margin-bottom: 1.2em;
+    text-align: start;
+  }
+}
+
+/* medias for phone */
+@media screen and (max-width: 767px) {
+  header .navbar {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-family: "Raleway", sans-serif;
+    background-color: var(--DarkBlueIntro);
+  }
+
+  header .navbar .brand-logo {
+    display: block;
+  }
+
+  header .navbar .brand-logo img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  header .navbar ul {
+    list-style-type: none;
+    width: 100%;
+    text-align: end;
+    padding: 0;
+  }
+
+  header .navbar ul li {
+    display: inline-block;
+    padding: 0 0.25em;
+  }
+
+  header .navbar ul li a {
+    text-decoration: none;
+    color: var(--White);
+    text-align: center;
+
+    transition: 0.3s;
+  }
+
+  header .navbar ul li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  main section .container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1.2em;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: var(--DarkBlueIntro);
+    background-image: url("./images/bg-curvy-mobile.svg");
+    background-size: 180% 65%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin-bottom: 0;
+  }
+
+  main section .container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.2em;
+  }
+
+  main section .container button,
+  footer form button {
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 999px;
+    height: auto;
+    border: 0;
+    background-color: var(--Blue);
+    font-size: 1rem;
+    color: var(--White);
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  main section .container button {
+    width: 75%;
+    max-width: 75%;
+  }
+
+  main section .container button:hover,
+  footer form button:hover {
+    background-color: var(--Cyan);
+  }
+
+  main section .features {
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: var(--DarkBlueMain);
+    background-image: none;
+  }
+
+  main section .features .col {
+    padding: 2.5em 0;
+  }
+
+  main section .features .col img {
+    width: 25%;
+    max-width: 25%;
+    height: auto;
+  }
+
+  main section .see-how {
+    background-color: var(--DarkBlueMain);
+    background-image: none;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  main section .see-how img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  main section .see-how .see-how-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  main section .see-how a {
+    text-decoration: none;
+    text-align: start;
+    padding: 0.3em;
+    color: var(--Cyan);
+    display: flex;
+    box-sizing: initial;
+    align-items: center;
+    justify-content: flex-start;
+    width: 10.5em;
+    font-size: 0.95rem;
+    font-family: "Open Sans", sans-serif;
+    border-bottom: 1px solid var(--Cyan);
+  }
+
+  main section .see-how a img {
+    width: 10%;
+    margin-left: 0.3em;
+    margin-top: 0.2em;
+    margin-bottom: auto;
+    vertical-align: middle;
+  }
+
+  main section .testimonials {
+    background: url("./images/bg-quotes.png") no-repeat;
+    background-size: 8%;
+    background-position-y: 5.2%;
+    background-position-x: 9%;
+    background-color: var(--DarkBlueMain);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 5em 1.5em;
+    padding-bottom: 20em;
+  }
+
+  main section .testimonials .card {
+    background-color: var(--DarkBlueTestimoials);
+    background-image: none;
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    box-shadow: 0 5px 5px 2px rgba(54, 54, 54, 0.1);
+    margin: 0.5em 0;
+  }
+
+  main section .testimonials .card .card-body {
+    text-align: start;
+  }
+
+  main section .testimonials .card .card-footer {
+    display: flex;
+  }
+
+  main section .testimonials .card .card-footer .user-info {
+    padding: 0 1em;
+  }
+
+  main section .testimonials .card .card-footer > img {
+    align-self: center;
+    max-width: 13%;
+    border-radius: 999px;
+  }
+
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer form {
+    position: absolute;
+    bottom: 80%;
+    background-color: var(--DarkBlueMain);
+    padding: 2em 1.5em;
+    z-index: 1;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 5px 5px rgba(1, 1, 1, 0.2);
+    width: 90%;
+  }
+
+  footer form span {
+    font-family: "Open Sans", sans-serif;
+    color: var(--LightRed);
+    text-align: start;
+    display: none;
+  }
+
+  footer form input {
+    border: 0;
+    border-radius: 999px;
+    padding: 1em;
+    font-family: "Open Sans", sans-serif;
+    margin: 1.2em 0;
+  }
+
+  footer .footer-div {
+    padding: 0 1em;
+    padding-top: 1em;
+    background-color: var(--DarkBlueFooter);
+    color: var(--White);
+    font-family: "Open Sans", sans-serif;
+  }
+
+  footer .logo {
+    margin: 1em 0em;
+    margin-top: 20em;
+    margin-right: auto;
+    padding-left: 2em;
+  }
+
+  footer ul {
+    list-style-type: none;
+    padding: 1em 1em;
+  }
+
+  footer ul li {
+    padding: 0.8em 0;
+    text-align: start;
+  }
+
+  footer ul li a {
+    text-decoration: none;
+    color: var(--White);
+    transition: all 0.3s;
+  }
+
+  footer ul li a:hover {
+    font-weight: bold;
+  }
+
+  footer .social li {
+    display: inline;
+    padding: 0 0.3em;
+  }
+
+  footer .footer-div .contact {
+    display: grid;
+  }
+
+  footer .footer-div .contact li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0.4em 0;
+  }
+
+  footer .footer-div .contact li img {
+    display: inline;
+    align-self: center;
+    margin-right: 2em;
+    margin-bottom: auto;
+  }
+
+  footer .footer-div .contact li p {
+    margin-top: 0;
+  }
+
+  footer .social i {
+    color: white;
+    font-size: 1rem;
+    border-radius: 999px;
+    border: 1px solid white;
+    padding: 0.5em;
+  }
+
+  footer .social {
+    margin: auto;
+    width: fit-content;
+  }
+
+  footer .social li a:hover i {
+    color: var(--Cyan);
+    border: 1px solid var(--Cyan);
+  }
+
+  footer .social .fb {
+    padding: 0.5em 0.7em;
+  }
+}
